@@ -1,6 +1,3 @@
-FROM curlimages/curl
+FROM debian:stable-slim
 
-USER root
-RUN apk add git gettext libintl
-
-USER curl_user
+RUN apt update && apt upgrade -y && apt install git curl
